@@ -52,12 +52,14 @@ function App() {
             <Redirect to={ROUTES.CONTACTS} />
           </Route>
           <Route path={ROUTES.CONTACTS}>
-             {/* Add props to ContactsPage */}
             <ContactsPage addContact={ addContact } contacts={ contacts } />
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
-            {/* Add props to AppointmentsPage */}
-            <AppointmentsPage addAppointment={ addAppointment } appointments={ appointments } contacts= { contacts }/>          </Route>
+            <AppointmentsPage 
+              appointments={ appointments } 
+              contacts= { contacts }
+              addAppointment={ addAppointment } />
+          </Route>
         </Switch>
       </main>
     </>

@@ -16,11 +16,6 @@ export const ContactsPage = (props) => {
       props.addContact(name, phone, email);
     }
     else console.log('Duplicate!');
-
-    /*
-    Add contact info and clear data
-    if the contact name is not a duplicate
-    */
   };
 
   useEffect(() => {
@@ -49,7 +44,7 @@ export const ContactsPage = (props) => {
       <hr />
       <section>
         <h2>Contacts</h2>
-        <TileList contacts={ props.contacts }/>
+        <TileList displayItems={ props.contacts }/>
       </section>
     </div>
   );
