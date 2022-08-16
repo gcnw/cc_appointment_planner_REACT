@@ -9,13 +9,14 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
   const [appointmentTime, setAppointmentTime] = useState('');
 
   const handleSubmit = (e) => {
+    console.log('submit handled')  
     e.preventDefault();
     addAppointment(
       appointmentTitle,
       appointmentContact,
       appointmentDate,
       appointmentTime); 
-      console.log('submit handled')  
+
   };
 
   return (
@@ -32,7 +33,7 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
           setDate={ setAppointmentDate }
           time={ appointmentTime }
           setTime={ setAppointmentTime }
-          onSubmit={ handleSubmit }
+          handleSubmit={ handleSubmit }
         />
       </section>
       <hr />

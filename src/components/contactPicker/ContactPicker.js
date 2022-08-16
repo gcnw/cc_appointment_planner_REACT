@@ -3,13 +3,15 @@ import React from "react";
 export const ContactPicker = ({ contacts, handleSelection }) => {
   return (
     <div>
-      <label for="contactInput">Choose Contact:</label>
-      <select name="contactInput" id="contactInput">
-      <option selected="selected">no contact selected</option>
+      <label htmlFor="contactInput">Choose Contact:</label>
+      <select 
+        name="contactInput" 
+        id="contactInput"
+        defaultValue="no contact selected">
         {
         contacts.map((contact) => {
           return (
-            <option value={ contact }>{ contact }</option>
+            <option key={contact.name} value={ contact.name }>{ contact.name }</option>
           )
         })}
       </select>
